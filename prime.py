@@ -1,5 +1,5 @@
 from collections import defaultdict
-from multiprocessing import Pool, cpu_count
+from multiprocessing import Pool, cpu_count, freeze_support
 from tqdm import tqdm
 
 
@@ -74,15 +74,32 @@ def prime_factors_str(n: int, symbol=" * ", reverse_order: bool = False) -> str:
 
 
 if __name__ == '__main__':
-    print(f"This machine have {cpu_count()} CPUs")
-    n = eval(input("Input a number to determined it is prime or not: "))  # hint: 1000000000121 is a prime number
-    if type(n) is not int: raise TypeError("Please input a valid positive integer")
-    print(f"Calculating if {n} is Prime number:")
-    print("(warn: the speed will be slower and slower)")
-    state = is_prime_number(n)
-    print(f"{n} is{'' if state else ' not'} a prime number.")
-    if not state:
-        print(f"The factor of {n} is:")
-        print("Calculating n's factors", end="")
-        print("\r" + " " * 23, end="")
-        print(f"\rn = {prime_factors_str(n)}")
+    pass
+    # Case 1: Judge if the number user input is an prime number or not
+    # print(f"This machine have {cpu_count()} CPUs")
+    # n = eval(input("Input a number to determined it is prime or not: "))  # hint: 1000000000121 is a prime number
+    # if type(n) is not int: raise TypeError("Please input a valid positive integer")
+    # print(f"Calculating if {n} is Prime number:")
+    # print("(warn: the speed will be slower and slower)")
+    # state = is_prime_number(n)
+    # print(f"{n} is{'' if state else ' not'} a prime number.")
+    # if not state:
+    #     print(f"The factor of {n} is:")
+    #     print("Calculating n's factors", end="")
+    #     print("\r" + " " * 23, end="")
+    #     print(f"\rn = {prime_factors_str(n)}")
+
+    # Case 2: Find All Prime Number
+    # i = 1
+    # while True:
+    #     i += 2
+    #     state = is_prime_number(i)
+    #     print(f"{i} is{'' if state else ' not'} a prime number.")
+    #     if state:
+    #         with open("prime.txt", "a+") as f:
+    #             f.write(str(i))
+    #             f.write("\n")
+
+
+
+
