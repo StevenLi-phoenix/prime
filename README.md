@@ -33,6 +33,30 @@ python prime.py
 
 Follow the prompts to input a number. The script will then determine if the number is prime and, if not, will display its prime factors.
 
+## Example
+
+```
+This machine have 8 CPUs
+Input a number to determined it is prime or not: 1000000000121
+Calculating if 1000000000121 is Prime number:
+(warn: the speed will be slower and slower)
+100%|████████████████████████████████| 999999/999999 [01:08<00:00, 14616.05it/s]
+1000000000121 is a prime number.
+```
+
+If the number is not prime, the output will display its factors.
+
+```
+This machine have 8 CPUs
+Input a number to determined it is prime or not: 24
+Calculating if 24 is Prime number:
+(warn: the speed will be slower and slower)
+  0%|                                                     | 0/3 [00:00<?, ?it/s]
+24 is not a prime number.
+The factor of 24 is:
+n = 3 * 2 * 2 * 2
+```
+
 ## Functions and Classes
 
 ### `DivisorGenerator`
@@ -72,29 +96,6 @@ Returns the prime factors result generated from `prime_factors` but in string fo
 - `reverse_order`: If `True`, factors are displayed in reverse order.
 - Returns a string representation of the prime factors.
 
-## Example
-
-```
-This machine have 8 CPUs
-Input a number to determined it is prime or not: 1000000000121
-Calculating if 1000000000121 is Prime number:
-(warn: the speed will be slower and slower)
-100%|████████████████████████████████| 999999/999999 [01:08<00:00, 14616.05it/s]
-1000000000121 is a prime number.
-```
-
-```
-This machine have 8 CPUs
-Input a number to determined it is prime or not: 24
-Calculating if 24 is Prime number:
-(warn: the speed will be slower and slower)
-  0%|                                                     | 0/3 [00:00<?, ?it/s]
-24 is not a prime number.
-The factor of 24 is:
-n = 3 * 2 * 2 * 2
-```
-
-If the number is not prime, the output will display its factors.
 
 ## Author
 
